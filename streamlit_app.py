@@ -27,7 +27,7 @@ streamlit.text(fruityvice_response)
 #create the repeatable code block (called a function)
 def get_fruityvice_data(this_fruit_choice):
   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
-  fruityvice_normalised = pandas.json_normalised(fruityvice_response.json())
+  fruityvice_normalised = pandas.json_normalize(fruityvice_response.json())
   return fruityvice_normalised
 
 #New section to display fruityvice api response
@@ -39,7 +39,7 @@ try:
   else:
       back_from_function = get_fruityvice_data(fruit_choice)
       streamlit.dataframe(back_from_function)
-    streamlit.error()
+
 
 
 import snowflake.connector
