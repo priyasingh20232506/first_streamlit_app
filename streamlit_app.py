@@ -42,7 +42,7 @@ try:
 
 
 
-import snowflake.connector
+'''import snowflake.connector
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
@@ -53,5 +53,5 @@ add_my_fruit = streamlit.text_input('What fruit would you like to add?','Plum')
 streamlit.write('Thanks for adding', add_my_fruit)
 
 
-my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values('from streamlit')")
+my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values('from streamlit')")'''
 
