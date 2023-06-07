@@ -6,7 +6,7 @@ from urllib.error import URLError
 
 streamlit.title('My Parents New Healthy Diner')
 
-streamlit.header('🥗Breakfast Faviourates')   
+streamlit.header('🥗Breakfast Favourates')   
 
 streamlit.text('🥣Omega 3 & Blueberry Oatmeal')
 
@@ -60,7 +60,7 @@ if streamlit.button("Get Fruit Load List :" ):
 #Allow end user to add a fruit to the list
 def insert_row_snowflake (new_fruit):
     with my_cnx.cursor() as my_cur:
-        my_cur.execute("insert into fruit load list values ('"+ ????? +"')")
+        my_cur.execute("insert into fruit load list values ('"+ "jackfruit","papaya","guava","kiwi" +"')")
         return "Thanks for adding" + new_fruit
  
  
